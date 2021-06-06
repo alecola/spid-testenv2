@@ -3,7 +3,7 @@
 #########################
 
 # The base URL where spid-testenv2 is reachable at.
-base_url: "http://localhost:8088"
+base_url: "http://spid-testenv2.westeurope.azurecontainer.io:8088"
 
 # Key and certificate used to sign SAML messages.
 key_file: "./conf/idp.key"
