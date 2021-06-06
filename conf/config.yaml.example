@@ -17,9 +17,9 @@ cert_file: "./conf/idp.crt"
 metadata:
   # From local files, globbing is supported
   # eg: "*.xml", "sp_metadat?.xml" o "sp[-_]metadat[a-z].xml"
-  local:
-    - "./conf/sp_metadata.xml"
-  # db: 'postgresql+psycopg2://postgres:@localhost:5432/exampledb'
+  #local:
+  #  - "./conf/sp_metadata.xml"
+  db: 'postgresql+psycopg2://postgres:postgres@spid-postgres-db.westeurope.azurecontainer.io:5432/postgres'
   # From a remote URL.
   # remote:
   #   - "http://spid-sp/metadata"
@@ -50,7 +50,7 @@ users_file: "conf/users.json"
 # PostgreSQL database holding the identities of test users.
 # If specified, it will override the "user_file" parameter.
 # The required tables will be automatically created if they don't exist.
-# users_db: 'postgresql+psycopg2://postgres:@localhost:5432/exampledb'
+users_db: 'postgresql+psycopg2://postgres:postgres@spid-postgres-db.westeurope.azurecontainer.io:5432/postgres'
 
 # If enabled, allows to add new users from the UI.
 can_add_user: true
